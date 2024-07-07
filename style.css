@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .text-grey {
+    color: grey;
+  }
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+
+.header-desktop{
+    display: flex;
+}
+
+header img {
+    width: 7%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+   
+    font-size: 15px;
+}
+nav li  a {
+    text-decoration: none;
+    margin: 0 30px;
+    color: black;
+    gap: 30px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header1 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+header  .header-button  {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 60px;
+    align-items: center;
+    gap: 30px;
+}
+.header-button a { 
+    text-decoration: none;
+    color: #000;  
+}
+.button-1 {
+    background-color: rgba(244, 244, 245, 0.24);
+    padding: 10px;
+    border-radius: 10px;
+}
+.button-2 {
+    background-color: #28b0a6;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+.phone-nav {
+    height: 100vh;
+    display: none;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    background-color: rgb(12, 4, 4);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding: 20px;
+}
+.phone-nav nav ul {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+
+
+.phone-nav nav ul a {
+    color: white;
+
+}
+#header-close-button {
+    color: white;
+}
+
+
+ 
+
+.hero {
+    background-image: url("images/freetown-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 560px;
+    margin: 20px 60px ;
+    border-radius: 30px;
+    position: relative;
+}
+
+.hero-items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    color: white;
+}
+
+.hero-items h1 {
+    font-size: 60px;
+}
+
+.hero-items p {
+    margin: 40px;
+}
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+}
+.banking {
+    display: flex;
+    flex-direction: column;
+    padding-right: 320px;
+}
+.banking button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin: 40px;
+    gap: 10px;
+    background-color: white;
+    box-shadow: -5px 5px 0px 12px rgba(0,0,0,0.01);
+    border-radius: 20px;
+    position: absolute;
+    width: 80%;
+    left: 86px;
+    bottom: -110px;
+}
+.activity {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.location-icon {
+    background-color: #28b0a6;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.category {
+    padding: 150px 60px;
+}
+
+.category-items {
+    margin: 10px;
+}
+
+.phone-header {
+    display: none;
+}
+
+
+@media (max-width: 480px) {
+    .phone-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-desktop {
+        display: none;
+    }
+    .phone-nav {
+      flex-direction: column; 
+      align-items: stretch; 
+    }
+    .logo-nav {
+        margin-bottom: 10px;
+    }
+    nav ul  {
+      flex-direction: column;
+    } 
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    header img {
+        width: 10%;
+    }
+    #hamburger-icon {
+      display: block;
+  }
+  }
