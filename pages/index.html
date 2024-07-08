@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
     <header>
@@ -19,7 +19,7 @@
       <div class="header-desktop">
         <div class="header1">
           <div class="logo">
-            <img src="images/logo.png" alt="" />
+            <img src="../images/logo.png" alt="" />
             <nav>
               <ul>
                 <li><a href="">Destination</a></li>
@@ -38,13 +38,13 @@
      
       <div class="phone-header">
         <i class="fa-solid fa-bars" id="hamburger-icon"></i>
-        <img src="images/logo.png" alt="" />
+        <img src="../images/logo.png" alt="" />
         <a href="" class="button-2">Explore</a>
       </div>
 
       <div class="phone-nav" id="phone-nav-item">
         <div class="logo-nav">
-          <img src="images/logo.png" alt="" />
+          <img src="../images/logo.png" alt="" />
           <i class="fas fa-times" id="header-close-button"></i>
         </div>
         <nav>
@@ -62,11 +62,15 @@
           <p>The Himalayan Mountain Ranges</p>
           <h1>Nepal Country</h1>
           <div class="weather">
-            <div>
+
+            <div class="weather-items">
               <p>-2° C Very Cold</p>
-              <i class="fa-regular fa-circle-left"></i>
-              <i class="fa-regular fa-circle-right"></i>
+              <div class="weather-items-icon">
+                <i class="fa-regular fa-circle-left"></i>
+                <i class="fa-regular fa-circle-right"></i>
+              </div>
             </div>
+
             <div class="banking">
               <p>
                 We Accept Payment Through <br />
@@ -77,24 +81,24 @@
           </div>
         </div>
         <div class="location">
-          <div>
+          <div class="items">
             <h3>Location</h3>
             <div class="activity">
-              <p class="text-grey">Enter your destination</p>
+              <input type="text" placeholder="Enter your destination">
               <i class="fa-solid fa-location-dot"></i>
             </div>
           </div>
-          <div>
+          <div class="items">
             <h3>Activity</h3>
             <div class="activity">
-              <p class="text-grey">Bungee jump</p>
+              <input type="text" placeholder="Bungee jump">
               <i class="fa-regular fa-circle-dot"></i>
             </div>
           </div>
-          <div>
-            <h3>Date</h3>
+          <div class="items">
+            <h3>Set Date</h3>
             <div class="activity">
-              <p class="text-grey">Set date</p>
+               <input type="text" placeholder="Set date">
               <i class="fa-regular fa-calendar-days"></i>
             </div>
           </div>
@@ -111,13 +115,39 @@
           </p>
         </div>
         <div class="category-items">
-          <p>4.9</p>
-          <i class="fa-solid fa-umbrella-beach"></i>
-          <h3>Beach Activity</h3>
-          <p>196 Activities</p>
+          <div class="beach">
+            <p>4.9</p>
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <h2>Beach Activity</h2>
+            <h5>196 Activities</h5>
+          </div>
+          <div class="beach">
+            <p>4.5</p>
+            <i class="fa-solid fa-hat-wizard"></i>
+            <h2>Bungee Jump</h2>
+            <h5>196 Activities</h5>
+          </div>
+          <div class="beach">
+            <p>3.8</p>
+            <i class="fa-solid fa-city"></i>
+            <h2>City Tours</h2>
+            <h5>196 Activities</h5>
+          </div>
+          <div class="beach">
+            <p>4.8</p>
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            <h2>Hiking trips</h2>
+            <h5>196 Activities</h5>
+          </div>
+          <div class="beach">
+            <p>4.5</p>
+            <i class="fa-solid fa-hat-wizard"></i>
+            <h2>Bungee Jump</h2>
+            <h5>196 Activities</h5>
+          </div>
         </div>
       </section>
     </main>
-    <script src="header.js"></script>
+    <script src="../scripts/header.js"></script>
   </body>
 </html>

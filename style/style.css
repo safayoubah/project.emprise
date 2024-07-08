@@ -66,7 +66,7 @@ header  .header-button  {
 .button-2 {
     background-color: #28b0a6;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 
@@ -101,8 +101,6 @@ header  .header-button  {
     list-style-type: none;
     gap: 10px;
 }
-
-
 .phone-nav nav ul a {
     color: white;
 
@@ -115,24 +113,25 @@ header  .header-button  {
  
 
 .hero {
-    background-image: url("images/freetown-bg.jpg");
+    background-image: url("../images/freetown-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 560px;
     margin: 20px 60px ;
-    border-radius: 30px;
+    border-radius: 35px;
     position: relative;
 }
 
 .hero-items {
     display: flex;
     flex-direction: column;
-    padding-left: 200px;
     color: white;
+    padding: 60px 100px;
 }
 
 .hero-items h1 {
-    font-size: 60px;
+    font-size: 80px;
+    padding: 30px;
 }
 
 .hero-items p {
@@ -142,16 +141,31 @@ header  .header-button  {
 .weather {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 0 0;
 }
+.weather-items {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 0px;
+    font-size: 23px;
+}
+.weather-items-icon {
+    font-size: 25px;
+}
+
 .banking {
     display: flex;
     flex-direction: column;
-    padding-right: 320px;
+    align-items: first baseline;
 }
 .banking button {
     background-color: transparent;
     border: none;
     color: white;
+    font-weight: bold;
+    font-size: 20px;
     border-bottom: 1px solid;
 }
 
@@ -164,16 +178,25 @@ header  .header-button  {
     gap: 10px;
     background-color: white;
     box-shadow: -5px 5px 0px 12px rgba(0,0,0,0.01);
-    border-radius: 20px;
+    border-radius: 25px;
     position: absolute;
-    width: 80%;
-    left: 86px;
+    width: 73%;
+    left: 125px;
     bottom: -110px;
 }
 .activity {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+}
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.activity input {
+    border: none;
+    width: 70%;
 }
 .location-icon {
     background-color: #28b0a6;
@@ -181,13 +204,43 @@ header  .header-button  {
     border-radius: 15px;
 }
 
-.category {
-    padding: 150px 60px;
-}
 
-.category-items {
-    margin: 10px;
-}
+
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-top: 130px;
+    gap: 20px;
+ }
+ .category-items {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;  
+    gap: 40px 40px;
+    padding: 20px;
+ }
+ .beach {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
+    padding: 90px 30px 20px;
+    border-radius: 25px;
+    position: relative;
+ }
+ .beach p {
+    position: absolute;
+    background-color: #fdf1dd;
+    padding: 10px;
+    border-radius: 10px;
+    top: 15px;
+    right: 20px;
+ }
+ .beach i {
+    font-size: 40px;
+    color: #28b0a6;
+ }
 
 .phone-header {
     display: none;
@@ -225,4 +278,75 @@ header  .header-button  {
     #hamburger-icon {
       display: block;
   }
+
+  .hero {
+    height: auto; /* Adjust height to auto for smaller screens */
+    margin: 10px 20px; /* Adjust margins for smaller screens */
+}
+
+.hero-items {
+    padding: 40px 20px; /* Adjust padding for smaller screens */
+}
+
+.hero-items h1 {
+    font-size: 40px; /* Adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+
+.hero-items p {
+    margin: 10px; /* Adjust margin for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.weather {
+    padding: 10px; /* Adjust padding for smaller screens */
+}
+
+.weather-items {
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.weather-items-icon {
+    font-size: 18px; /* Adjust font size for smaller screens */
+}
+
+.banking {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+}
+
+.banking button {
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.location {
+    padding: 10px; /* Adjust padding for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
+    flex-direction: column;
+    top: 255px;
+    bottom: -210px;
+    width: 80%;
+    left: 30px;
+}
+
+.activity input {
+    width: 100%; /* Adjust width for smaller screens */
+}
+
+.location-icon {
+    padding: 10px; /* Adjust padding for smaller screens */
+    bottom: 10px; /* Adjust position from bottom */
+    right: 10px; /* Adjust position from right */
+    width: 70%;
+    text-align: end;
+}
+.category {
+    margin-top: 218px;
+}
+
+.category-items {
+    display: grid;
+    grid-template-columns: auto auto ;  
+    gap: 40px 40px;
+    padding: 20px 1px;
+ }
   }
