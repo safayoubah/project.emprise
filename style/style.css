@@ -761,6 +761,53 @@ grid-row-gap: 5px;
 
 
 
+.sponsors  {
+    padding: 50px 70px;
+}
+
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.head-phone {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+.head-phone i {
+    color: black;
+    background-color: white;
+    padding: 8px;border-radius: 20px;
+}
+.for-sale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 40px;
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 40px;
+    background-color: #1d293f;
+    padding: 50px;
+    border-radius: 10px; 
+}
+
+
+
+
+
 @media (max-width: 480px) {
     .phone-header {
         display: flex;
