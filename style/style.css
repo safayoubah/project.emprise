@@ -64,7 +64,7 @@ header  .header-button  {
     border-radius: 10px;
 }
 .button-2 {
-    background-color: #28b0a6;
+    background-color: aqua;
     padding: 10px;
     border-radius: 15px;
 }
@@ -202,7 +202,7 @@ header  .header-button  {
     width: 70%;
 }
 .location-icon {
-    background-color: #28b0a6;
+    background-color: aqua;
     padding: 20px;
     border-radius: 15px;
 }
@@ -242,12 +242,16 @@ header  .header-button  {
  }
  .beach i {
     font-size: 40px;
-    color: #28b0a6;
+    color: aqua;
  }
 
 .phone-header {
     display: none;
 }
+
+
+
+
 
 
 .trending {
@@ -315,7 +319,7 @@ header  .header-button  {
     gap: 10px;
 }
 .clock i {
-    color: #28b0a6;
+    color: aqua;
     font-size: 14px;
 }
 .correct {
@@ -328,8 +332,11 @@ header  .header-button  {
 }
 .new {
     font-size: 14px;
-    color: #28b0a6;
+    color: aqua;
 }
+
+
+
 
 
 
@@ -339,7 +346,6 @@ header  .header-button  {
     padding: 80px 64px;
     gap: 20px;
 }
-
 
 .cities {
     display: grid;
@@ -354,10 +360,6 @@ grid-row-gap: 5px;
 .london { grid-area: 1 / 4 / 4 / 7; }
 .amsterdam{ grid-area: 4 / 4 / 7 / 5; }
 .paris  { grid-area: 4 / 5 / 7/  7; }
-
-
-
-
 
 .vietnam {
     background-image: url(../images/Photo\ \(3\).png);
@@ -509,6 +511,9 @@ grid-row-gap: 5px;
 
 
 
+
+
+
 .seller {
     justify-content: space-between;
     padding: 38px 70px;
@@ -520,7 +525,7 @@ grid-row-gap: 5px;
 }
 .seller button {
     color: white;
-    background-color: #28b0a6;
+    background-color: aqua;
     border: none;
     padding: 10px 15px;
     border-radius: 30px;
@@ -605,6 +610,9 @@ grid-row-gap: 5px;
 
 
 
+
+
+
 .guides {
     display: flex;
     flex-direction: column;
@@ -641,7 +649,7 @@ grid-row-gap: 5px;
     gap: 50px;
 }
 .adventure h3 {
-    color: #28b0a6;
+    color: aqua;
 }
 .adventure h2 {
     font-size: 35px;
@@ -672,16 +680,83 @@ grid-row-gap: 5px;
   
 }
 .owl-prev span {
-    background-color: #28b0a6;
+    background-color: aqua;
     padding: 15px;
     border-radius: 20px;
 }
 .owl-next span {
-    background-color: #28b0a6;
+    background-color: aqua;
     padding: 15px;
     border-radius: 20px;
 }
 
+
+.experience {
+    padding: 60px;
+}
+.world {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: aqua;
+    border-radius: 15px;
+    padding: 40px;
+}
+.world button {
+    background-color: white;
+    color: aqua;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+
+
+.offers {
+    display: flex;
+    gap: 20px;
+    padding: 60px
+}
+.subscibe {
+   display: flex;
+   gap: 25px;
+} 
+.camera {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.calling {
+    display: flex;
+    flex-direction: column;
+   gap: 80px;
+    padding: 30px;
+}
+.calling h4{
+    color: aqua;
+}
+.calling h2{
+    font-size: 30px;
+}
+.envelope {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.envelope input {
+    padding: 10px;
+    border: none;
+}
+.envelope button {
+    padding: 14px 25px;
+    border: none;
+    color: white;
+    background-color: aqua;
+}
 
 
 
