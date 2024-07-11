@@ -12,7 +12,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 0px 40px;
     align-items: center;
 }
 
@@ -21,13 +21,12 @@ header {
 }
 
 header img {
-    width: 7%;
+    width: 5%;
 }
 nav ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
-   
     font-size: 15px;
 }
 nav li  a {
@@ -56,7 +55,8 @@ header  .header-button  {
 }
 .header-button a { 
     text-decoration: none;
-    color: #000;  
+    color: #000;
+    width: 73px;  
 }
 .button-1 {
     background-color: rgba(244, 244, 245, 0.24);
@@ -72,14 +72,16 @@ header  .header-button  {
 
 
 
-
+.phone-header a{
+    text-decoration: none;
+}
 .phone-nav {
     height: 100vh;
     display: none;
     align-items: center;
     z-index: 100;
     position: fixed;
-    background-color: rgb(12, 4, 4);
+    background-color: rgb(2, 25, 41);
     left: 0;
     right: 0;
     top: 0;
@@ -116,7 +118,7 @@ header  .header-button  {
     background-image: url("../images/freetown-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 560px;
+    height: 460px;
     margin: 20px 60px ;
     border-radius: 35px;
     position: relative;
@@ -143,6 +145,7 @@ header  .header-button  {
     justify-content: space-between;
     align-items: center;
     padding: 0px 100px 0 0;
+    height: 10px;
 }
 .weather-items {
     display: flex;
@@ -182,7 +185,7 @@ header  .header-button  {
     position: absolute;
     width: 73%;
     left: 125px;
-    bottom: -110px;
+    bottom: -125px;
 }
 .activity {
     display: flex;
@@ -211,7 +214,7 @@ header  .header-button  {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    margin-top: 130px;
+    margin-top: 140px;
     gap: 20px;
  }
  .category-items {
@@ -245,6 +248,442 @@ header  .header-button  {
 .phone-header {
     display: none;
 }
+
+
+.trending {
+   display: flex;
+   flex-direction: column;
+   padding: 39px 70px; 
+   gap: 15px;
+}
+.trending-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.trending p {
+  font-size: 13px;
+  color: grey;
+}
+.trending-items {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px; 
+    gap: 20px;
+    position: relative;
+    box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
+    border-radius: 20px;
+}
+.parsent {
+    background-color: pink;
+    width: 30px;
+    padding: 3px;
+    border-radius: 20px;
+    position: absolute;
+    right: 28px;
+    top: 30px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.trending-items {
+    width: 50%;
+}
+.mountain {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 0;
+}
+.mountain i {
+    background-color: rgb(252, 252, 252);
+    padding: 10px;
+    border-radius: 20px;
+}
+.prize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.prize i {
+  color: orange;
+  font-size: 10px;
+}
+.clock {
+    display: flex;
+    gap: 10px;
+}
+.clock i {
+    color: #28b0a6;
+    font-size: 14px;
+}
+.correct {
+    display: flex;
+    gap: 20px;
+}
+.new {
+    display: flex;
+    gap: 10px;
+}
+.new {
+    font-size: 14px;
+    color: #28b0a6;
+}
+
+
+
+.destination {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 64px;
+    gap: 20px;
+}
+
+
+.cities {
+    display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 5px;
+}
+.vietnam { grid-area: 1 / 1 / 4 / 2; }
+.old { grid-area: 4 / 1 / 7 / 2; }
+.greece { grid-area: 1 / 2 / 7 / 4; }
+.london { grid-area: 1 / 4 / 4 / 7; }
+.amsterdam{ grid-area: 4 / 4 / 7 / 5; }
+.paris  { grid-area: 4 / 5 / 7/  7; }
+
+
+
+
+
+.vietnam {
+    background-image: url(../images/Photo\ \(3\).png);
+    height: 335px;
+    width: 255px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+}
+.vietnam p {
+   color: orange; 
+   background-color: beige;
+   width: 38px;
+   padding: 6px;
+   border-radius: 15px;
+   top: 10px;
+   left: 10px;
+}
+
+
+
+.old {
+    background-image: url(../images/Photo\ \(4\).png);
+    height: 335px;
+    width: 255px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+}
+.old   p {
+    color: orange; 
+    background-color: beige;
+    width: 38px;
+    padding: 6px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+
+
+
+.greece {
+    background-image: url(../images/Photo\ \(5\).png);
+    height: 670px;
+    width: 400px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+}
+.greece  p {
+    color: orange; 
+    background-color: beige;
+    width: 38px;
+    padding: 6px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+
+
+
+.london {
+    background-image: url(../images/Photo\ \(6\).png);
+    height: 325px;
+    width: 570px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+}
+.london p {
+    color: orange; 
+    background-color: beige;
+    width: 38px;
+    padding: 6px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+
+
+
+.amsterdam {
+    background-image: url(../images/Photo\ \(7\).png);
+    height: 335px;
+    color: white;
+    width: 240px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+}
+.amsterdam  p {
+    color: orange; 
+    background-color: beige;
+    width: 38px;
+    padding: 6px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+
+
+
+.paris {
+    background-image: url(../images/Photo\ \(8\).png);
+    height: 335px;
+    width: 317px;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 15px ;
+ }
+
+.paris  p {
+    color: orange; 
+    background-color: beige;
+    width: 38px;
+    padding: 6px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+   }
+
+
+
+
+.seller {
+    justify-content: space-between;
+    padding: 38px 70px;
+} 
+.seller-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+}
+.seller button {
+    color: white;
+    background-color: #28b0a6;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+.days-content:hover .days{
+    display: flex;
+}
+.days-content{
+    background-image: url(../images/Photo\ \(9\).png);
+    border-radius: 20px;
+    height: 265px;
+    width: 407px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    position: relative;
+}
+.days {
+    margin: 10px;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+   
+}
+.days p {
+    color: red;
+    background-color: pink;
+    padding: 5px;
+    width: 50px;
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.night {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+.day-night {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 20px;
+    border-bottom: 1px solid;
+}
+.explore {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+.explore i {
+   color: black;
+   background-color: white;
+   padding: 5px;
+   border-radius: 10px;
+   
+}
+.sky {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.sky p {
+    font-size: 10px;
+}
+.nature {
+    display: flex;
+    gap: 20px;
+}
+.train {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.guides {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 70px;
+    gap: 20px;
+    position: relative;
+}
+.guides-img{
+    position: relative;
+}
+.guides-img img{
+   width: 90%;
+
+}
+.number {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 0 10px 0 0;
+}
+.pictures {
+    display: flex;
+}
+.guide-items {
+    display: flex;
+    gap: 20px;
+}
+.adventure {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 50px;
+}
+.adventure h3 {
+    color: #28b0a6;
+}
+.adventure h2 {
+    font-size: 35px;
+}
+.journey {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+.journey h4 {
+    font-size: 26px;
+}
+.daily {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.facebook {
+    display: flex;
+    gap: 20px;
+    margin-top: 70px;
+    font-weight: 30px;
+}
+.owl-nav {
+   position: absolute;
+   top: -80px;
+   right: 0;
+  
+}
+.owl-prev span {
+    background-color: #28b0a6;
+    padding: 15px;
+    border-radius: 20px;
+}
+.owl-next span {
+    background-color: #28b0a6;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+
+
 
 
 @media (max-width: 480px) {
@@ -322,7 +761,7 @@ header  .header-button  {
     padding: 10px; /* Adjust padding for smaller screens */
     margin: 10px; /* Adjust margin for smaller screens */
     flex-direction: column;
-    top: 255px;
+    top: 215px;
     bottom: -210px;
     width: 80%;
     left: 30px;
@@ -340,7 +779,10 @@ header  .header-button  {
     text-align: end;
 }
 .category {
-    margin-top: 218px;
+    margin-top: 221px;
+}
+.cate-header{
+    text-align: center;
 }
 
 .category-items {
@@ -348,5 +790,14 @@ header  .header-button  {
     grid-template-columns: auto auto ;  
     gap: 40px 40px;
     padding: 20px 1px;
+ }
+ .trending-title {
+    align-items: center;
+ }
+ .grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+    align-items: center;
  }
   }
