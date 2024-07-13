@@ -807,6 +807,85 @@ grid-row-gap: 5px;
 
 
 
+.links {
+   display: flex; 
+   justify-content: space-between;
+   padding: 60px;
+}
+
+.plus {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+}
+.footer-content img {
+    width: 40px;
+}
+.guys {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.guys h4 {
+    color: aqua;
+}
+.usa {
+    display: flex;
+    gap: 10px;
+}
+.india {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+}
+.footer-service {
+    display: flex;
+    gap: 70px;
+}
+.footer-item   {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-item ul  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+}
+.footer-item li {
+    list-style: none;
+    font-size: 13px;
+}
+.touch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.let {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+.policy {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+}
+
+
+
+
 
 @media (max-width: 480px) {
     .phone-header {
