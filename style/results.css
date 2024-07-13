@@ -1,0 +1,446 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .text-grey {
+    color: grey;
+  }
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.header-desktop{
+    display: flex;
+}
+
+header img {
+    width: 5%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 15px;
+}
+nav li  a {
+    text-decoration: none;
+    margin: 0 30px;
+    color: black;
+    gap: 30px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header1 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+}
+header  .header-button  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.header-button a { 
+    text-decoration: none;
+    color: #000;
+    width: 73px;  
+}
+.button-1 {
+    background-color: rgba(244, 244, 245, 0.24);
+    padding: 10px;
+    border-radius: 10px;
+}
+.button-2 {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+
+
+.phone-header a{
+    text-decoration: none;
+}
+.phone-nav {
+    height: 100vh;
+    display: none;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    background-color: rgb(2, 25, 41);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding: 20px;
+}
+.phone-nav nav ul {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+.phone-nav nav ul a {
+    color: white;
+
+}
+#header-close-button {
+    color: white;
+}
+.phone-header {
+    display: none;
+}
+
+
+
+
+
+.cultural {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    padding: 20px 70px;
+    border-radius: 10px;
+}
+.sort {
+    display: flex;
+    gap: 10px;
+}
+.sort select{
+    border: none;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+
+.deals {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+.specials {
+    display: flex;
+    gap: 15px;
+    border: 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+}
+.specials i {
+    font-size: 20px;
+    color: aqua;
+}
+
+
+.tranveling {
+    display: flex;
+    padding: 0 70px;
+    gap: 30px;
+}
+.date {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 30px;
+}
+.you {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.you input {
+    border-radius: 5px;
+}
+
+
+
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    padding: 39px 70px; 
+    gap: 30px;
+ }
+ .trending-title {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-bottom: 40px;
+ }
+ .trending p {
+   font-size: 13px;
+   color: grey;
+ }
+ .trending-items {
+     display: flex;
+     flex-direction: column;
+     padding: 10px 10px; 
+     gap: 30px;
+     position: relative;
+     box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
+     border-radius: 20px;
+ }
+ .parsent {
+     background-color: pink;
+     width: 30px;
+     padding: 3px;
+     border-radius: 20px;
+     position: absolute;
+     right: 28px;
+     top: 30px;
+ }
+ .grid {
+     display: grid;
+     grid-template-columns: auto auto;
+ }
+ .trending-items {
+     width: 70%;
+ }
+ .mountain {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+ }
+ .mountain i {
+     background-color: rgb(252, 252, 252);
+     padding: 10px;
+     border-radius: 20px;
+ }
+ .prize {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .prize i {
+   color: orange;
+   font-size: 10px;
+ }
+ .clock {
+     display: flex;
+     gap: 10px;
+ }
+ .clock i {
+     color: aqua;
+     font-size: 14px;
+ }
+ .correct {
+     display: flex;
+     gap: 20px;
+ }
+ .new {
+     display: flex;
+     gap: 10px;
+ }
+ .new {
+     font-size: 14px;
+     color: aqua;
+ }
+ .stoke {
+    width: 75%;
+}
+
+.seller {
+    justify-content: space-between;
+    padding: 38px 70px;
+} 
+.seller-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+}
+.seller button {
+    color: white;
+    background-color: aqua;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+.days-content:hover .days{
+    display: flex;
+}
+.days-content{
+    background-image: url(../images/Photo\ \(9\).png);
+    border-radius: 20px;
+    height: 265px;
+    width: 407px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    position: relative;
+}
+.days {
+    margin: 10px;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+   
+}
+.days p {
+    color: red;
+    background-color: pink;
+    padding: 5px;
+    width: 50px;
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.night {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+.day-night {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 20px;
+    border-bottom: 1px solid;
+}
+.explore {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 50px;
+}
+.explore i {
+   color: black;
+   background-color: white;
+   padding: 5px;
+   border-radius: 10px;
+   
+}
+.sky {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.sky p {
+    font-size: 10px;
+}
+.nature {
+    display: flex;
+    gap: 20px;
+}
+.train {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.links {
+    display: flex; 
+    justify-content: space-between;
+    padding: 60px;
+ }
+ 
+ .plus {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+ .footer-content {
+     display: flex;
+     justify-content: space-between;
+     padding: 30px 60px;
+ }
+ .footer-content img {
+     width: 40px;
+ }
+ .guys {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+ .guys h4 {
+     color: aqua;
+ }
+ .usa {
+     display: flex;
+     gap: 10px;
+ }
+ .india {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+ .footer-items {
+     display: flex;
+     justify-content: space-between;
+     padding: 30px 60px;
+ }
+ .footer-service {
+     display: flex;
+     gap: 70px;
+ }
+ .footer-item   {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+ .footer-item ul  {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+    
+ }
+ .footer-item li {
+     list-style: none;
+     font-size: 13px;
+ }
+ .touch {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+ .let {
+     display: flex;
+     align-items: baseline;
+     gap: 20px;
+ }
+ .policy {
+     display: flex;
+     justify-content: space-between;
+     padding: 60px;
+ }
+ 
