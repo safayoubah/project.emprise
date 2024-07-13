@@ -200,7 +200,9 @@ header  .header-button  {
 .activity input {
     border: none;
     width: 70%;
+    border-bottom: 1px solid;
 }
+
 .location-icon {
     background-color: aqua;
     padding: 20px;
@@ -881,6 +883,14 @@ grid-row-gap: 5px;
     display: flex;
     justify-content: space-between;
     padding: 60px;
+}
+.emprise {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+.emprise img {
+    width: 25px;
 }
 
 
