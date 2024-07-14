@@ -118,14 +118,12 @@ header  .header-button  {
 .hero-section .owl-nav {
     position: absolute;
     top: 358px;
-    right: 1458px;
+    right: 1072px;
    
  }
 
 .owl-nav {
    position: absolute;
-   top: px;
-   left: 0;
    right: 0;
   
 }
@@ -133,14 +131,17 @@ header  .header-button  {
     padding: 60px;
 }
 .owl-prev span {
-    background-color: aqua;
-    padding: 15px;
+    border: 1px solid;
+    padding: 5px;
     border-radius: 20px;
+    font-size: 15px;
 }
 .owl-next span {
-    background-color: aqua;
-    padding: 15px;
-    border-radius: 20px;
+    border: 1px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 15px;
 }
 
 .hero-item{
@@ -151,6 +152,7 @@ header  .header-button  {
     margin: 20px 60px ;
     border-radius: 35px;
     position: relative;
+    margin-bottom: 100px;
 }
 .hero-content-2{
     background-image: url("../images/download.jpg");
@@ -168,6 +170,7 @@ header  .header-button  {
     flex-direction: column;
     color: white;
     padding: 60px 100px;
+    margin-bottom: 50px;
 }
 
 .hero-items h1 {
@@ -208,15 +211,14 @@ header  .header-button  {
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 1px solid;
 }
 
 .location {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px;
-    margin: 40px;
+    padding: 40px;
+    margin: 50px;
     gap: 10px;
     background-color: white;
     box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
@@ -259,12 +261,26 @@ header  .header-button  {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    margin-top: 140px;
+    margin-top: 60px;
     gap: 40px;
  }
  .owl-dots {
     display: none;
  }
+ .owl-prev span {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.owl-next span {
+    border: 1px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+ 
  .cate-header h2 {
     font-size: 35px;
  }
@@ -278,9 +294,10 @@ header  .header-button  {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    box-shadow: 0px 0px 27px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px -18px rgba(0,0,0,0.75);
     padding: 90px 30px 20px;
     border-radius: 25px;
+    margin: 20px;
     position: relative;
  }
  .beach p {
@@ -317,6 +334,19 @@ header  .header-button  {
     gap: 10px;
     margin-bottom: 40px;
 }
+.owl-prev span {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.owl-next span {
+    border: 1px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 15px;
+}
 .trending-title h2 {
     font-size: 35px;
 }
@@ -327,8 +357,9 @@ header  .header-button  {
 .trending-items {
     display: flex;
     flex-direction: column;
-    padding: 10px 10px; 
-    gap: 20px;
+    padding: 10px 10px;
+    margin: 20px; 
+    gap: 30px;
     position: relative;
     box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
     border-radius: 20px;
@@ -346,9 +377,7 @@ header  .header-button  {
     display: grid;
     grid-template-columns: auto auto auto ;
 }
-.trending-items {
-    width: 50%;
-}
+
 .mountain {
    display: flex;
    justify-content: space-between;
@@ -696,6 +725,19 @@ grid-row-gap: 5px;
    width: 90%;
 
 }
+.owl-prev span {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.owl-next span {
+    border: 1px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 50px;
+    font-size: 15px;
+}
 .number {
     position: absolute;
     bottom: 0px;
@@ -749,12 +791,12 @@ grid-row-gap: 5px;
   
 }
 .owl-prev span {
-    background-color: aqua;
+    
     padding: 15px;
     border-radius: 20px;
 }
 .owl-next span {
-    background-color: aqua;
+    
     padding: 15px;
     border-radius: 20px;
 }

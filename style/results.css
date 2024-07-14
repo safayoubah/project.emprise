@@ -18,6 +18,7 @@ header {
 
 .header-desktop{
     display: flex;
+    justify-content: space-between;
 }
 
 header img {
@@ -145,6 +146,7 @@ header  .header-button  {
 }
 
 
+
 .deals {
     display: flex;
     justify-content: space-between;
@@ -170,6 +172,7 @@ header  .header-button  {
 }
 .date {
     width: 25%;
+    height: 1013px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -184,6 +187,15 @@ header  .header-button  {
 }
 .you input {
     border-radius: 5px;
+}
+.range {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.range input {
+    padding: 10px 0;
+    border-radius: 10px;
 }
 
 
