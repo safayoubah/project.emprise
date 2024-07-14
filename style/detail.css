@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .text-grey {
+    color: grey;
+  }
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.header-desktop{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 5%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 15px;
+}
+nav li  a {
+    text-decoration: none;
+    margin: 0 30px;
+    color: black;
+    gap: 30px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header1 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+}
+header  .header-button  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.header-button a { 
+    text-decoration: none;
+    color: #000;
+    width: 73px;  
+}
+.button-1 {
+    background-color: rgba(244, 244, 245, 0.24);
+    padding: 10px;
+    border-radius: 10px;
+}
+.button-2 {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+
+
+.phone-header a{
+    text-decoration: none;
+}
+.phone-nav {
+    height: 100vh;
+    display: none;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    background-color: rgb(2, 25, 41);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding: 20px;
+}
+.phone-nav nav ul {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+.phone-nav nav ul a {
+    color: white;
+
+}
+#header-close-button {
+    color: white;
+}
+.phone-header {
+    display: none;
+}
+
+.details {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+.pictures-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.picture-1 {
+position: relative;
+}
+.image {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: aliceblue;
+    height: 40px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    position: absolute;
+    right: 290px;
+    bottom: -90px;
+}
