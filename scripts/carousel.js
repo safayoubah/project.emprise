@@ -35,11 +35,11 @@ $('.sponsors').owlCarousel({
 
 $('.category-items').owlCarousel({
     loop:true,
-    margin:10,
+    margin:6,
     nav:true,
     responsive:{
         0:{
-            items:5
+            items:4
         },
         600:{
             items:4
@@ -49,3 +49,39 @@ $('.category-items').owlCarousel({
         }
     }
 })
+$('.hero-content-1').owlCarousel({
+    loop:true,
+    margin:1,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+$('.grid').owlCarousel({
+    loop:true,
+    margin:1,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
+
+

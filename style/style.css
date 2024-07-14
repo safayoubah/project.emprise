@@ -18,6 +18,7 @@ header {
 
 .header-desktop{
     display: flex;
+    justify-content: space-between;
 }
 
 header img {
@@ -25,7 +26,6 @@ header img {
 }
 nav ul{
     display: flex;
-    justify-content: space-between;
     list-style: none;
     font-size: 15px;
 }
@@ -49,9 +49,9 @@ nav li  a {
 header  .header-button  {
     display: flex;
     justify-content: space-between;
-    padding-right: 60px;
+    
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 .header-button a { 
     text-decoration: none;
@@ -60,12 +60,12 @@ header  .header-button  {
 }
 .button-1 {
     background-color: rgba(244, 244, 245, 0.24);
-    padding: 10px;
+    padding: 4px 10px;
     border-radius: 10px;
 }
 .button-2 {
     background-color: aqua;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 15px;
 }
 
@@ -112,17 +112,56 @@ header  .header-button  {
 }
 
 
- 
+.hero-content-1{
+    display: flex;
+} 
+.hero-section .owl-nav {
+    position: absolute;
+    top: 358px;
+    right: 1458px;
+   
+ }
 
-.hero {
+.owl-nav {
+   position: absolute;
+   top: px;
+   left: 0;
+   right: 0;
+  
+}
+.owl-dots {
+    padding: 60px;
+}
+.owl-prev span {
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 20px;
+}
+.owl-next span {
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.hero-item{
     background-image: url("../images/freetown-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 460px;
+    height: 500px;
     margin: 20px 60px ;
     border-radius: 35px;
     position: relative;
 }
+.hero-content-2{
+    background-image: url("../images/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 20px 60px ;
+    border-radius: 35px;
+    position: relative;
+}
+
 
 .hero-items {
     display: flex;
@@ -176,11 +215,11 @@ header  .header-button  {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 60px;
     margin: 40px;
     gap: 10px;
     background-color: white;
-    box-shadow: -5px 5px 0px 12px rgba(0,0,0,0.01);
+    box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.75);
     border-radius: 25px;
     position: absolute;
     width: 73%;
@@ -202,6 +241,10 @@ header  .header-button  {
     width: 70%;
     border-bottom: 1px solid;
 }
+.activity select {
+    border: none;
+    border-bottom: 1px solid;
+}
 
 .location-icon {
     background-color: aqua;
@@ -217,19 +260,25 @@ header  .header-button  {
     flex-direction: column;
     padding: 50px;
     margin-top: 140px;
-    gap: 20px;
+    gap: 40px;
+ }
+ .owl-dots {
+    display: none;
+ }
+ .cate-header h2 {
+    font-size: 35px;
  }
  .category-items {
     display: grid;
     grid-template-columns: auto auto auto auto auto;  
-    gap: 40px 40px;
-    padding: 20px;
+    gap: px ;
+    padding: 10px;
  }
  .beach {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 27px -12px rgba(0,0,0,0.75);
     padding: 90px 30px 20px;
     border-radius: 25px;
     position: relative;
@@ -259,7 +308,7 @@ header  .header-button  {
 .trending {
    display: flex;
    flex-direction: column;
-   padding: 39px 70px; 
+   padding: 39px 50px; 
    gap: 15px;
 }
 .trending-title {
@@ -267,6 +316,9 @@ header  .header-button  {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 40px;
+}
+.trending-title h2 {
+    font-size: 35px;
 }
 .trending p {
   font-size: 13px;
@@ -292,7 +344,7 @@ header  .header-button  {
 }
 .grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto ;
 }
 .trending-items {
     width: 50%;
@@ -345,8 +397,11 @@ header  .header-button  {
 .destination {
     display: flex;
     flex-direction: column;
-    padding: 80px 64px;
+    padding: 80px 60px;
     gap: 20px;
+}
+.destination h2 {
+    font-size: 35px;
 }
 
 .cities {
@@ -381,6 +436,7 @@ grid-row-gap: 5px;
    width: 38px;
    padding: 6px;
    border-radius: 15px;
+   position: absolute;
    top: 10px;
    left: 10px;
 }
@@ -518,12 +574,20 @@ grid-row-gap: 5px;
 
 .seller {
     justify-content: space-between;
-    padding: 38px 70px;
+    padding: 38px 50px;
 } 
 .seller-title {
     display: flex;
     justify-content: space-between;
-    padding: 45px;
+    padding: 15px;
+}
+.best {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.best h2 {
+    font-size: 35px;
 }
 .seller button {
     color: white;
@@ -621,6 +685,9 @@ grid-row-gap: 5px;
     padding: 38px 70px;
     gap: 20px;
     position: relative;
+}
+.guides h2 {
+    font-size: 35px;
 }
 .guides-img{
     position: relative;

@@ -24,6 +24,46 @@ const produits = [
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
   },
+  {
+    id: 4,
+    remise: "30%",
+    img: "../images/Photo (2).png",
+    titre: "Forest Wild Life",
+    description: "Hiking Tour | Stoke on Trent",
+    prix: "$895.00",
+  },
+  {
+    id: 5,
+    remise: "30%",
+    img: "../images/Photo (2).png",
+    titre: "Forest Wild Life",
+    description: "Hiking Tour | Stoke on Trent",
+    prix: "$895.00",
+  },
+  {
+    id: 6,
+    remise: "30%",
+    img: "../images/Photo (2).png",
+    titre: "Forest Wild Life",
+    description: "Hiking Tour | Stoke on Trent",
+    prix: "$895.00",
+  },
+  {
+    id: 7,
+    remise: "30%",
+    img: "../images/Photo (2).png",
+    titre: "Forest Wild Life",
+    description: "Hiking Tour | Stoke on Trent",
+    prix: "$895.00",
+  },
+  {
+    id: 8,
+    remise: "30%",
+    img: "../images/Photo (2).png",
+    titre: "Forest Wild Life",
+    description: "Hiking Tour | Stoke on Trent",
+    prix: "$895.00",
+  }, 
 ];
 
 
