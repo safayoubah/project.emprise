@@ -1,4 +1,4 @@
-const product = document.getElementsByClassName("grid");
+const product = document.getElementsByClassName("trending-products");
 const produits = [
   {
     id: 1,
@@ -119,4 +119,3 @@ produits.forEach((produit) => {
   });
 });
 
-const focus = document.getElementById("grid");

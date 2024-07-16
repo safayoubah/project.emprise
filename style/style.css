@@ -134,13 +134,15 @@ header  .header-button  {
     border: 1px solid;
     padding: 5px;
     border-radius: 20px;
+    color: white;
     font-size: 15px;
 }
 .owl-next span {
     border: 1px solid;
     padding: 10px;
-    margin: 20px;
+    margin: 30px;
     border-radius: 50px;
+    color: white;
     font-size: 15px;
 }
 
@@ -325,7 +327,7 @@ header  .header-button  {
 .trending {
    display: flex;
    flex-direction: column;
-   padding: 39px 50px; 
+   margin-left: 40px; 
    gap: 15px;
 }
 .trending-title {
@@ -603,7 +605,7 @@ grid-row-gap: 5px;
 
 .seller {
     justify-content: space-between;
-    padding: 38px 50px;
+    margin: 40px 40px;
 } 
 .seller-title {
     display: flex;
@@ -1040,11 +1042,15 @@ grid-row-gap: 5px;
 
   .hero {
     height: auto; /* Adjust height to auto for smaller screens */
-    margin: 10px 20px; /* Adjust margins for smaller screens */
+    margin: 10px 30px; /* Adjust margins for smaller screens */
+}
+
+.hero-item {
+    margin-bottom: 150px;
 }
 
 .hero-items {
-    padding: 40px 20px; /* Adjust padding for smaller screens */
+    padding: 80px 0px; /* Adjust padding for smaller screens */
 }
 
 .hero-items h1 {
@@ -1058,7 +1064,7 @@ grid-row-gap: 5px;
 }
 
 .weather {
-    padding: 10px; /* Adjust padding for smaller screens */
+    padding: 30px; /* Adjust padding for smaller screens */
 }
 
 .weather-items {
@@ -1070,7 +1076,7 @@ grid-row-gap: 5px;
 }
 
 .banking {
-    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-top: 30px; /* Adjust margin for smaller screens */
 }
 
 .banking button {
@@ -1078,13 +1084,13 @@ grid-row-gap: 5px;
 }
 
 .location {
-    padding: 10px; /* Adjust padding for smaller screens */
-    margin: 10px; /* Adjust margin for smaller screens */
+    padding: 30px; /* Adjust padding for smaller screens */
+    margin: 7px; /* Adjust margin for smaller screens */
     flex-direction: column;
-    top: 215px;
-    bottom: -210px;
-    width: 80%;
-    left: 30px;
+    top: 306px;
+    bottom: -129px;
+    width: 66%;
+    left: 42px;
 }
 
 .activity input {
@@ -1099,7 +1105,7 @@ grid-row-gap: 5px;
     text-align: end;
 }
 .category {
-    margin-top: 221px;
+    margin-top: 5px;
 }
 .cate-header{
     text-align: center;
@@ -1107,7 +1113,7 @@ grid-row-gap: 5px;
 
 .category-items {
     display: grid;
-    grid-template-columns: auto auto ;  
+    grid-template-columns: auto;  
     gap: 40px 40px;
     padding: 20px 1px;
  }
@@ -1119,5 +1125,9 @@ grid-row-gap: 5px;
     grid-template-columns: auto;
     gap: 15px;
     align-items: center;
+ }
+ .head-phone{
+    display: flex;
+    flex-direction: column;
  }
   }
