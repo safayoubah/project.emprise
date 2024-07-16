@@ -1,19 +1,7 @@
 $('.pictures').owlCarousel({
+    margin:10,
     loop:true,
-    margin:2,
-    stagePadding:100,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
+    items:1
 })
 
 $('.sponsors').owlCarousel({
@@ -34,21 +22,11 @@ $('.sponsors').owlCarousel({
 })
 
 $('.category-items').owlCarousel({
+    margin:10,
     loop:true,
-    margin:6,
-    nav:true,
-    responsive:{
-        0:{
-            items:4
-        },
-        600:{
-            items:4
-        },
-        1000:{
-            items:4
-        }
-    }
+    items:4
 })
+
 $('.hero-content-1').owlCarousel({
     loop:true,
     margin:1,
@@ -66,27 +44,31 @@ $('.hero-content-1').owlCarousel({
     }
 })
 
-$('.grid').owlCarousel({
+
+
+
+$('.trending-products').owlCarousel({
+    margin:10,
     loop:true,
-    margin:1,
-    nav:true,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:1
+            items:2
         },
         1000:{
-            items:4
+            items: 4
         }
     }
 })
 
-$('.picture-1').owlCarousel({
+
+$('.dettails-items').owlCarousel({
     loop:true,
-    margin:1,
+    margin:10,
     nav:true,
+    dots:false,
     responsive:{
         0:{
             items:1
@@ -99,4 +81,5 @@ $('.picture-1').owlCarousel({
         }
     }
 })
+
 
