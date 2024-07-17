@@ -124,6 +124,7 @@ header  .header-button  {
     align-items: center;
     border: 1px solid;
     padding: 20px 70px;
+    margin: 0 40px;
     border-radius: 10px;
 }
 .sort {
@@ -194,8 +195,9 @@ header  .header-button  {
     align-items: center;
 }
 .range input {
-    padding: 10px 0;
+    padding: 10px;
     border-radius: 10px;
+    width: 85px;
 }
 
 
@@ -450,9 +452,33 @@ header  .header-button  {
      align-items: baseline;
      gap: 20px;
  }
+ .envelope {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.envelope input {
+    padding: 10px;
+    border: none;
+}
+.envelope button {
+    padding: 14px 25px;
+    border: none;
+    color: white;
+    background-color: aqua;
+}
  .policy {
      display: flex;
      justify-content: space-between;
      padding: 60px;
+ }
+ .emprise {
+     display: flex;
+     justify-content: space-between;
+     padding: 0 60px;
+ }
+ .emprise img {
+     width: 25px;
  }
  
