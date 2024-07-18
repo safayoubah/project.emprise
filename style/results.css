@@ -64,7 +64,7 @@ header  .header-button  {
     border-radius: 10px;
 }
 .button-2 {
-    background-color: aqua;
+    background-color: #fdbc60;
     padding: 10px;
     border-radius: 15px;
 }
@@ -162,7 +162,7 @@ header  .header-button  {
 }
 .specials i {
     font-size: 20px;
-    color: aqua;
+    color: #fdbc60;
 }
 
 
@@ -173,10 +173,10 @@ header  .header-button  {
 }
 .date {
     width: 25%;
-    height: 1013px;
+    height: 1105px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     border: 1px solid #E9ECEF;
     border-radius: 10px;
     padding: 30px;
@@ -189,6 +189,12 @@ header  .header-button  {
 .you input {
     border-radius: 5px;
 }
+
+.range-set {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .range {
     display: flex;
     gap: 10px;
@@ -197,7 +203,7 @@ header  .header-button  {
 .range input {
     padding: 10px;
     border-radius: 10px;
-    width: 85px;
+    width: 75px;
 }
 
 
@@ -227,6 +233,7 @@ header  .header-button  {
      position: relative;
      box-shadow: 0px 0px 28px -20px rgba(0,0,0,0.34);
      border-radius: 20px;
+     margin-bottom: 25px;
  }
  .parsent {
      background-color: pink;
@@ -268,7 +275,7 @@ header  .header-button  {
      gap: 10px;
  }
  .clock i {
-     color: aqua;
+     color: #fdbc60;
      font-size: 14px;
  }
  .correct {
@@ -281,7 +288,7 @@ header  .header-button  {
  }
  .new {
      font-size: 14px;
-     color: aqua;
+     color: #fdbc60;
  }
  .stoke {
     width: 75%;
@@ -289,25 +296,34 @@ header  .header-button  {
 
 .seller {
     justify-content: space-between;
-    padding: 38px 70px;
-} 
+    margin: 40px 40px;
+}
+
 .seller-title {
     display: flex;
     justify-content: space-between;
-    padding: 45px;
+    padding: 15px;
 }
+
+.best {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.best h2 {
+    font-size: 35px;
+}
+
 .seller button {
     color: white;
-    background-color: aqua;
+    background-color: #fdbc60;
     border: none;
     padding: 10px 15px;
     border-radius: 30px;
 }
-.days-content:hover .days{
-    display: flex;
-}
-.days-content{
-    background-image: url(../images/Photo\ \(9\).png);
+
+.days-content {
     border-radius: 20px;
     height: 265px;
     width: 407px;
@@ -316,15 +332,21 @@ header  .header-button  {
     justify-content: end;
     gap: 10px;
     position: relative;
+    transition: transform 0.5s ease-in-out;
 }
+
+.days-content:hover .days {
+    display: flex;
+}
+
 .days {
     margin: 10px;
     color: white;
     display: none;
     flex-direction: column;
     justify-content: end;
-   
 }
+
 .days p {
     color: red;
     background-color: pink;
@@ -335,51 +357,73 @@ header  .header-button  {
     right: 20px;
     top: 10px;
 }
+
 .night {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-
 }
+
 .day-night {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 20px;
     gap: 20px;
-    border-bottom: 1px solid #E9ECEF;
+    border-bottom: 1px solid;
 }
+
 .explore {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 50px;
 }
+
 .explore i {
-   color: black;
-   background-color: white;
-   padding: 5px;
-   border-radius: 10px;
-   
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
 }
+
 .sky {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
 }
+
 .sky p {
     font-size: 10px;
 }
+
 .nature {
     display: flex;
     gap: 20px;
 }
+
 .train {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.train-1 .days-content {
+    background-image: url('../images/94be095228b7c02c7a2b135975267d9f.jpg');
+    background-size: cover;
+}
+
+.train-2 .days-content {
+    background-image: url('../images/Djibouti-City.jpg');
+    background-size: cover;
+}
+
+.train-3 .days-content {
+    background-image: url('../images/images.jpeg');
+    background-size: cover;
+}
+
 
 
 
@@ -411,7 +455,7 @@ header  .header-button  {
      gap: 15px;
  }
  .guys h4 {
-     color: aqua;
+     color: #fdbc60;
  }
  .usa {
      display: flex;
@@ -471,7 +515,7 @@ header  .header-button  {
     padding: 14px 25px;
     border: none;
     color: white;
-    background-color: aqua;
+    background-color: #fdbc60;
 }
  .policy {
      display: flex;

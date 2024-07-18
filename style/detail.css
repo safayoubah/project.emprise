@@ -64,7 +64,7 @@ header  .header-button  {
     border-radius: 10px;
 }
 .button-2 {
-    background-color: aqua;
+    background-color: #fdbc60;
     padding: 10px;
     border-radius: 15px;
 }
@@ -114,6 +114,9 @@ header  .header-button  {
     display: none;
 }
 
+
+
+
 .details {
     display: flex;
     padding: 40px;
@@ -141,7 +144,7 @@ position: relative;
 }
 
 .owl-prev span:hover, .owl-next span:hover {
-    background-color: aqua;
+    background-color: #fdbc60;
 }
 .owl-dot {
     display: none;
@@ -179,7 +182,7 @@ position: relative;
 .holiday {
    display: flex; 
    justify-content: space-between;
-   padding-left: 285px;
+   padding-left: 206px;
    padding-right: 50px;
    gap: 90px;
 } 
@@ -246,7 +249,7 @@ position: relative;
     margin-top: 50px;
 }
 .duration i {
-    color: aqua;
+    color: #fdbc60;
 }
 .size {
     display: flex;
@@ -260,10 +263,11 @@ position: relative;
 .person {
     display: flex;
     flex-direction: column; 
-    gap: 10px;
+    gap: 20px;
     background-color: rgb(248, 247, 247);
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
+    width: 100%;
 }
 .person h5 {
     color: red;
@@ -341,7 +345,7 @@ position: relative;
     
 }
 .one p {
-    background-color: aqua;
+    background-color: #fdbc60;
     padding: 5px 10px;
     border-radius: 20px;
 }
@@ -445,7 +449,7 @@ position: relative;
 }
 .dinners i {
     font-size: 20px;
-    color: aqua;
+    color: #fdbc60;
 }
 
 .visa {
@@ -484,7 +488,7 @@ position: relative;
     gap: 10px;
 }
 .what i {
-    background-color: aqua;
+    background-color: #fdbc60;
     padding: 10px 15px;
     border-radius: 30px;
  }
@@ -500,25 +504,34 @@ position: relative;
 
  .seller {
     justify-content: space-between;
-    padding: 38px 70px;
-} 
+    margin: 40px 40px;
+}
+
 .seller-title {
     display: flex;
     justify-content: space-between;
-    padding: 45px;
+    padding: 15px;
 }
+
+.best {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.best h2 {
+    font-size: 35px;
+}
+
 .seller button {
     color: white;
-    background-color: aqua;
+    background-color: #fdbc60;
     border: none;
     padding: 10px 15px;
     border-radius: 30px;
 }
-.days-content:hover .days{
-    display: flex;
-}
-.days-content{
-    background-image: url(../images/Photo\ \(9\).png);
+
+.days-content {
     border-radius: 20px;
     height: 265px;
     width: 407px;
@@ -527,15 +540,21 @@ position: relative;
     justify-content: end;
     gap: 10px;
     position: relative;
+    transition: transform 0.5s ease-in-out;
 }
+
+.days-content:hover .days {
+    display: flex;
+}
+
 .days {
     margin: 10px;
     color: white;
     display: none;
     flex-direction: column;
     justify-content: end;
-   
 }
+
 .days p {
     color: red;
     background-color: pink;
@@ -546,52 +565,72 @@ position: relative;
     right: 20px;
     top: 10px;
 }
+
 .night {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-
 }
+
 .day-night {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 20px;
     gap: 20px;
-    border-bottom: 1px solid #E9ECEF;
+    border-bottom: 1px solid;
 }
+
 .explore {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-left: 50px;
 }
+
 .explore i {
-   color: black;
-   background-color: white;
-   padding: 5px;
-   border-radius: 10px;
-   
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
 }
+
 .sky {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
 }
+
 .sky p {
     font-size: 10px;
 }
+
 .nature {
     display: flex;
     gap: 20px;
 }
+
 .train {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.train-1 .days-content {
+    background-image: url('../images/94be095228b7c02c7a2b135975267d9f.jpg');
+    background-size: cover;
+}
+
+.train-2 .days-content {
+    background-image: url('../images/Djibouti-City.jpg');
+    background-size: cover;
+}
+
+.train-3 .days-content {
+    background-image: url('../images/images.jpeg');
+    background-size: cover;
+}
 
 
 
@@ -625,7 +664,7 @@ position: relative;
      gap: 15px;
  }
  .guys h4 {
-     color: aqua;
+     color: #fdbc60;
  }
  .usa {
      display: flex;
@@ -685,7 +724,7 @@ position: relative;
     padding: 14px 25px;
     border: none;
     color: white;
-    background-color: aqua;
+    background-color: #fdbc60;
 }
  .policy {
      display: flex;
