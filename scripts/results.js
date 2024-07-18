@@ -137,3 +137,38 @@ produits.forEach((produit) => {
 });
 
 const focus = document.getElementById("grid");
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const rangeInput = document.getElementById("range");
+  const minValueInput = document.getElementById("minValue");
+  const maxValueInput = document.getElementById("maxValue");
+
+  // Update text inputs when the range input changes
+  rangeInput.addEventListener("input", function() {
+      const value = rangeInput.value;
+      minValueInput.value = value;
+      maxValueInput.value = value;
+  });
+
+  // Update range input when the minimum value input changes
+  minValueInput.addEventListener("input", function() {
+      const value = minValueInput.value;
+      if (value >= rangeInput.min && value <= rangeInput.max) {
+          rangeInput.value = value;
+      }
+  });
+
+  // Update range input when the maximum value input changes
+  maxValueInput.addEventListener("input", function() {
+      const value = maxValueInput.value;
+      if (value >= rangeInput.min && value <= rangeInput.max) {
+          rangeInput.value = value;
+      }
+  });
+});
+
+
