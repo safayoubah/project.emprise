@@ -66,11 +66,13 @@ const produits = [
   }, 
 ];
 
-
+const redirectPageProduct = (productId) => {
+  window.location.href = `detail.html?id=${productId}`;
+};
 
 produits.forEach((produit) => {
   let html = `
-  <div class="trending-items" >
+  <div class="trending-items"  onclick="redirectPageProduct(${produit.id}) ">
          <div class="parsent">
            ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
          </div>
