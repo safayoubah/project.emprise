@@ -173,7 +173,7 @@ header  .header-button  {
 }
 .date {
     width: 25%;
-    height: 1105px;
+    height: 1301px;
     display: flex;
     flex-direction: column;
     gap: 30px;

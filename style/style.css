@@ -117,8 +117,8 @@ header  .header-button  {
 } 
 .hero-section .owl-nav {
     position: absolute;
-    top: 358px;
-    right: 1072px;
+    top: 372px;
+    right: 1027px;
    
  }
 
@@ -224,10 +224,12 @@ header  .header-button  {
     color: white;
     font-weight: bold;
     font-size: 20px;
+    border-bottom: 4px solid;
 }
 
 .location {
     display: flex;
+    z-index: 200;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
@@ -239,7 +241,7 @@ header  .header-button  {
     position: absolute;
     width: 73%;
     left: 125px;
-    bottom: -125px;
+    bottom: -350px;
 }
 .activity {
     display: flex;
