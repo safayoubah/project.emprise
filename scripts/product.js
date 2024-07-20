@@ -67,9 +67,10 @@ const produits = [
 ];
 
 
+
 produits.forEach((produit) => {
   let html = `
-  <div class="trending-items">
+  <div class="trending-items" >
          <div class="parsent">
            ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
          </div>

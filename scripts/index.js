@@ -11,3 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+document.getElementById('search-button').addEventListener('click', function() {
+    const destination = document.getElementById('destination-select').value;
+    const activity = document.getElementById('activity-select').value;
+    const date = document.getElementById('date-input').value;
+  
+    console.log('Destination:', destination);
+    console.log('Activity:', activity);
+    console.log('Date:', date);
+  });
