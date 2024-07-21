@@ -7,6 +7,7 @@ const produits = [
     titre: "Mountain Hiking Tour",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "swimming"
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "dancing",
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "swimming",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "dancing",
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "swimming",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "dancing",
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "swimming",
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "dancing",
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "swimming",
   },
   {
     id: 10,
@@ -79,96 +88,76 @@ const produits = [
     titre: "Forest Wild Life",
     description: "Hiking Tour | Stoke on Trent",
     prix: "$895.00",
+    activity: "dancing",
   },
 
 ];
 
 
-produits.forEach((produit) => {
-  let html = `
-  <div class="trending-items">
-         <div class="parsent">
-           ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
-         </div>
-          <img src="${produit.img}" alt="">
-         <div class="mountain">
-          <div>
-            <h3>${produit.titre}</h3>
-          <p>Hiking Tour | Stoke on Trent</p>
-          </div>
-           <div>
-            <i class="fa-regular fa-heart"></i>
-           </div>
-         </div>
-         <div class="prize">
-          <div>
-            <p>from</p>
-          <h2>${produit.prix}</h2>
-          <p>*Price varies</p>
-          </div>
-          <div>
-            <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>4.7 (108)</p>
-          </div>
-         </div>
-          <div class="clock">
-            <i class="fa-regular fa-clock"></i>
-             <p>7 Days</p>
-          </div>
-          <div class="correct">
-          <div class="new">
-            <i class="fa-solid fa-check"></i>
-            <p>Free Cancellation</p>
-          </div>
-          <div class="new">
-            <i class="fa-solid fa-check"></i>
-          <p>New on Entrada</p>
-          </div>
-          </div>
-         </div>
-    `;
-  Array.prototype.forEach.call(product, (element) => {
-    element.innerHTML += html;
-  });
-});
 
 const focus = document.getElementById("grid");
 
+const urlParams = new URLSearchParams(window.location.search);
+const destination = urlParams.get("destination");
+const activity = urlParams.get("activity");
+const date = urlParams.get("date")
 
+const result = produits.filter((product) => product.activity == activity);
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const rangeInput = document.getElementById("range");
-  const minValueInput = document.getElementById("minValue");
-  const maxValueInput = document.getElementById("maxValue");
-
-  // Update text inputs when the range input changes
-  rangeInput.addEventListener("input", function() {
-      const value = rangeInput.value;
-      minValueInput.value = value;
-      maxValueInput.value = value;
+if(activity){
+  result.forEach((produit) => {
+    let html = `
+    <div class="trending-items">
+           <div class="parsent"> 
+             ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
+           </div>
+            <img src="${produit.img}" alt="">
+           <div class="mountain">
+            <div>
+              <h3>${produit.titre}</h3>
+            <p>${produit.activity}</p>
+            </div>
+             <div>
+              <i class="fa-regular fa-heart"></i>
+             </div>
+           </div>
+           <div class="prize">
+            <div>
+              <p>from</p>
+            <h2>${produit.prix}</h2>
+            <p>*Price varies</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>4.7 (108)</p>
+            </div>
+           </div>
+            <div class="clock">
+              <i class="fa-regular fa-clock"></i>
+               <p>7 Days</p>
+            </div>
+            <div class="correct">
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+              <p>Free Cancellation</p>
+            </div>
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+            <p>New on Entrada</p>
+            </div>
+            </div>
+           </div>
+      `;
+    Array.prototype.forEach.call(product, (element) => {
+      element.innerHTML += html;
+    });
   });
-
-  // Update range input when the minimum value input changes
-  minValueInput.addEventListener("input", function() {
-      const value = minValueInput.value;
-      if (value >= rangeInput.min && value <= rangeInput.max) {
-          rangeInput.value = value;
-      }
-  });
-
-  // Update range input when the maximum value input changes
-  maxValueInput.addEventListener("input", function() {
-      const value = maxValueInput.value;
-      if (value >= rangeInput.min && value <= rangeInput.max) {
-          rangeInput.value = value;
-      }
-  });
-});
+}
 
 
+
+ 

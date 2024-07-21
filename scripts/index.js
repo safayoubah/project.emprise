@@ -21,4 +21,11 @@ document.getElementById('search-button').addEventListener('click', function() {
     console.log('Destination:', destination);
     console.log('Activity:', activity);
     console.log('Date:', date);
+
+    if(destination === '' || activity === '' || date === ""){
+        alert('veuyé rempli le chane')
+        return;
+    }
+
+    window.location.href = `results.html?destination=${destination}&activity=${activity}&date=${date}`
   });

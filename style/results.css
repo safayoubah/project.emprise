@@ -22,7 +22,7 @@ header {
 }
 
 header img {
-    width: 5%;
+    width: 10%;
 }
 nav ul{
     display: flex;
@@ -188,6 +188,7 @@ header  .header-button  {
 }
 .you input {
     border-radius: 5px;
+    padding: 10px;
 }
 
 .range-set {
