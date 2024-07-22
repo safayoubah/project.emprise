@@ -185,6 +185,7 @@ const produits = [
 
 const focus = document.getElementById("grid");
 
+
 const urlParams = new URLSearchParams(window.location.search);
 const destination = urlParams.get("destination");
 const activity = urlParams.get("activity");
