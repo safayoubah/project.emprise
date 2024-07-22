@@ -72,7 +72,7 @@ const redirectPageProduct = (productId) => {
 
 produits.forEach((produit) => {
   let html = `
-  <div class="trending-items"  onclick="redirectPageProduct(${produit.id}) ">
+  <div class="trending-items"  onclick="rediPageProduct(${produit.id}) ">
          <div class="parsent">
            ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
          </div>

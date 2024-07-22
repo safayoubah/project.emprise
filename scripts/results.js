@@ -1,4 +1,5 @@
 const product = document.getElementsByClassName("grid");
+const transformeText = (text) => text.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const produits = [
   {
     image: "https://mljziq84s4la.i.optimole.com/cb:nwkX.43d31/w:auto/h:auto/q:mauto/f:best/ig:avif/https://africa-horn-travel.com/wp-content/uploads/2019/11/Arta-randonnee.jpg",
@@ -189,11 +190,18 @@ const focus = document.getElementById("grid");
 const urlParams = new URLSearchParams(window.location.search);
 const destination = urlParams.get("destination");
 const activity = urlParams.get("activity");
-const date = urlParams.get("date")
+const date = urlParams.get("date");
 
-const result = produits.filter((product) => product.place == destination);
+const result = produits.filter((product) => 
+  product.place === destination &&
+  product.category === activity &&
+  product.date === date
+);
 
-  result.forEach((produit) => {
+const isFilterEmpty = !urlParams.get("destination") && !urlParams.get("activity") && !urlParams.get("date");
+
+if(isFilterEmpty){
+  produits.forEach((produit) => {
     let html = `
     <div class="trending-items">
            <div class="parsent"> 
@@ -203,7 +211,7 @@ const result = produits.filter((product) => product.place == destination);
            <div class="mountain">
             <div>
               <h3>${produit.title}</h3>
-            <p>${produit.category}</p>
+            <p class"text-grey">${produit.category}</p>
             </div>
              <div>
               <i class="fa-regular fa-heart"></i>
@@ -226,16 +234,16 @@ const result = produits.filter((product) => product.place == destination);
            </div>
             <div class="clock">
               <i class="fa-regular fa-clock"></i>
-               <p>${produit.duration}</p>
+               <p class"text-grey">${produit.duration}</p>
             </div>
             <div class="correct">
             <div class="new">
               <i class="fa-solid fa-check"></i>
-              <p>${produit.isFreeCancellation}</p>
+              <p class"text-grey">${produit.isFreeCancellation}</p>
             </div>
             <div class="new">
               <i class="fa-solid fa-check"></i>
-            <p>${produit.isNew}</p>
+            <p class"text-grey">${produit.isNew}</p>
             </div>
             </div>
            </div>
@@ -244,6 +252,62 @@ const result = produits.filter((product) => product.place == destination);
       element.innerHTML += html;
     });
   });
+ 
+}else {
+
+  result.forEach((produit) => {
+    let html = `
+    <div class="trending-items">
+           <div class="parsent"> 
+             ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
+           </div>
+            <img src="${produit.image}" alt="">
+           <div class="mountain">
+            <div>
+              <h3>${produit.title}</h3>
+            <p class"text-grey">${produit.category}</p>
+            </div>
+             <div>
+              <i class="fa-regular fa-heart"></i>
+             </div>
+           </div>
+           <div class="prize">
+            <div>
+              <p>from</p>
+            <h2>${produit.price} FDJ</h2>
+            <p>${produit.isPriceVariable}</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
+            </div>
+           </div>
+            <div class="clock">
+              <i class="fa-regular fa-clock"></i>
+               <p class"text-grey">${produit.duration}</p>
+            </div>
+            <div class="correct">
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+              <p class"text-grey">${produit.isFreeCancellation}</p>
+            </div>
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+            <p class"text-grey">${produit.isNew}</p>
+            </div>
+            </div>
+           </div>
+      `;
+    Array.prototype.forEach.call(product, (element) => {
+      element.innerHTML += html;
+    });
+  });
+
+}
 
 
 
