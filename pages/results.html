@@ -65,14 +65,14 @@
         <section>
             <div class="cultural">
                 <div>
-                    <p>Showing 1 10 of 2037 results for "cultural"</p>
+                    <p>Showing <span id="number">0</span> results for <span id="culture"></span></p>
                 </div>
                 <div class="sort">
                     <p class="text-grey">Sort by: </p>
                     <select id="sortByPrice">
                         <option value="0">Priz</option>
-                        <option value="1">croissant</option>
-                        <option value="2">descroissant</option>
+                        <option value="asc">croissant</option>
+                        <option value="desc">descroissant</option>
                     </select>
                 </div>
             </div>
@@ -81,15 +81,15 @@
             <div class="deals">
                 <div class="specials">
                     <i class="fa-solid fa-tag"></i>
-                    <p>Discounted Deals</p>  
+                    <p id="discount">Discounted Deals</p>  
                 </div>
                 <div class="specials">
                     <i class="fa-regular fa-circle-xmark"></i>
-                    <p>Free Cancellation</p> 
+                    <p id="free">Free Cancellation</p> 
                 </div>
                 <div class="specials">
                     <i class="fa-solid fa-champagne-glasses"></i>
-                    <p>Entrada Specials</p> 
+                    <p id="specials">Entrada Specials</p> 
                 </div>
                 <div class="specials">
                     <i class="fa-solid fa-clock-rotate-left"></i>
@@ -99,9 +99,9 @@
                     <i class="fa-solid fa-helicopter"></i>
                     <p>Private Tours</p>
                 </div>
-                <div class="specials">
+                <div class="specials" id="new">
                     <i class="fa-regular fa-star"></i>
-                    <p>New on Entrada</p>
+                    <p >New on Entrada</p>
                 </div>
             </div>
           </section>

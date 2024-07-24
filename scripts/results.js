@@ -1,3 +1,6 @@
+const number = document.getElementById("number");
+const culture = document.getElementById("culture");
+
 const transformeText = (text) => text.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const produits = [
   {
@@ -182,9 +185,7 @@ const produits = [
   },
 ];
 
-
 const focus = document.getElementById("grid");
-
 
 const urlParams = new URLSearchParams(window.location.search);
 const destination = urlParams.get("destination");
@@ -192,15 +193,17 @@ const activity = urlParams.get("activity");
 const date = urlParams.get("date");
 
 const result = produits.filter((product) => 
-  product.place === destination &&
-  product.category === activity &&
+  transformeText (product.place) === destination &&
+  transformeText(product.category) === activity &&
   product.date === date
 );
+culture.innerHTML = activity
 
-const displayProducts = (lisOfProducts) => {
+const isFilterEmpty = urlParams.get("destination") && urlParams.get("activity") && urlParams.get("date");
 
-  focus.innerHTML = '';
-  lisOfProducts.map((produit) => {
+if(isFilterEmpty){
+  number.innerHTML = result.length;
+  result.map((produit) => {
     let html = `
     <div class="trending-items">
            <div class="parsent"> 
@@ -249,79 +252,9 @@ const displayProducts = (lisOfProducts) => {
       `;
       focus.innerHTML += html;
   });
-} ;
-document.getElementById("sortByPrice").addEventListener("change", (event) => {
-  const value = event.target.value;
-  let sortedProducts = [...produits];
-  if (value == "1") {
-    sortedProducts.sort((a, b) => a.price - b.price); // Sort from most expensive to least expensive
-  } else{
-    sortedProducts.sort((a, b) => b.price - a.price); 
-  } 
-  displayProducts(sortedProducts);
-});
-
-// Initial display of all products
-displayProducts(produits);
-
-const isFilterEmpty = !urlParams.get("destination") && !urlParams.get("activity") && !urlParams.get("date");
-
-if(isFilterEmpty){
-  produits.forEach((produit) => {
-    let html = `
-    <div class="trending-items">
-           <div class="parsent"> 
-             ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
-           </div>
-            <img src="${produit.image}" alt="">
-           <div class="mountain">
-            <div>
-              <h3>${produit.title}</h3>
-            <p class"text-grey">${produit.category}</p>
-            </div>
-             <div>
-              <i class="fa-regular fa-heart"></i>
-             </div>
-           </div>
-           <div class="prize">
-            <div>
-              <p>from</p>
-            <h2>${produit.price} FDJ</h2>
-            <p>${produit.isPriceVariable}</p>
-            </div>
-            <div>
-              <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
-            </div>
-           </div>
-            <div class="clock">
-              <i class="fa-regular fa-clock"></i>
-               <p class"text-grey">${produit.duration}</p>
-            </div>
-            <div class="correct">
-            <div class="new">
-              <i class="fa-solid fa-check"></i>
-              <p class"text-grey">${produit.isFreeCancellation}</p>
-            </div>
-            <div class="new">
-              <i class="fa-solid fa-check"></i>
-            <p class"text-grey">${produit.isNew}</p>
-            </div>
-            </div>
-           </div>
-      `;
-    Array.prototype.forEach.call(product, (element) => {
-      element.innerHTML += html;
-    });
-  });
- 
 }else {
-
-  result.forEach((produit) => {
+  number.innerHTML = produits.length;
+  produits.map((produit) => {
     let html = `
     <div class="trending-items">
            <div class="parsent"> 
@@ -368,12 +301,265 @@ if(isFilterEmpty){
             </div>
            </div>
       `;
-    Array.prototype.forEach.call(product, (element) => {
-      element.innerHTML += html;
-    });
+      focus.innerHTML += html;
+  });
+}
+
+const sortByPrice = document.getElementById("sortByPrice");
+sortByPrice.addEventListener("change", (e) => {
+const value = e.target.value;
+const priceFilter = isFilterEmpty ? result : produits;
+const lesProduitOrdenne = select(priceFilter, value);
+focus.innerHTML ="";
+number.innerHTML = lesProduitOrdenne.length;
+lesProduitOrdenne.map((produit) => {
+    let html = `
+    <div class="trending-items">
+           <div class="parsent"> 
+             ${produit.remise ? `<p>${produit.remise}</p> ` : ""}
+           </div>
+            <img src="${produit.image}" alt="">
+           <div class="mountain">
+            <div>
+              <h3>${produit.title}</h3>
+            <p class"text-grey">${produit.category}</p>
+            </div>
+             <div>
+              <i class="fa-regular fa-heart"></i>
+             </div>
+           </div>
+           <div class="prize">
+            <div>
+              <p>from</p>
+            <h2>${produit.price} FDJ</h2>
+            <p>${produit.isPriceVariable}</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
+            </div>
+           </div>
+            <div class="clock">
+              <i class="fa-regular fa-clock"></i>
+               <p class"text-grey">${produit.duration}</p>
+            </div>
+            <div class="correct">
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+              <p class"text-grey">${produit.isFreeCancellation}</p>
+            </div>
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+            <p class"text-grey">${produit.isNew}</p>
+            </div>
+            </div>
+           </div>
+      `;
+      focus.innerHTML += html;
   });
 
-}
+})
+const select = (leproduit, ordre) => {
+  return leproduit.sort((a, b) =>{
+    if(ordre === "asc") {
+      return a.price - b.price;
+    }else if (ordre === "desc") {
+      return b.price - a.price;
+    } 
+  });
+};
+
+const free = document.getElementById("free");
+free.addEventListener("click", () => {
+  const filterCancelation = isFilterEmpty ? result : produits;
+  const resultCancelation = filterCancelation.filter((product) => product.isFreeCancellation);
+  focus.innerHTML ="";
+number.innerHTML = resultCancelation.length;
+resultCancelation.map((produit) => {
+    let html = `
+    <div class="trending-items">
+           <div class="parsent"> 
+             ${produit.discount ? `<p>${produit.discount}</p> ` : ""}
+           </div>
+            <img src="${produit.image}" alt="">
+           <div class="mountain">
+            <div>
+              <h3>${produit.title}</h3>
+            <p class"text-grey">${produit.category}</p>
+            </div>
+             <div>
+              <i class="fa-regular fa-heart"></i>
+             </div>
+           </div>
+           <div class="prize">
+            <div>
+              <p>from</p>
+            <h2>${produit.price} FDJ</h2>
+            <p>${produit.isPriceVariable}</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
+            </div>
+           </div>
+            <div class="clock">
+              <i class="fa-regular fa-clock"></i>
+               <p class"text-grey">${produit.duration}</p>
+            </div>
+            <div class="correct">
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+              <p class"text-grey">${produit.isFreeCancellation}</p>
+            </div>
+            <div class="new">
+              <i class="fa-solid fa-check"></i>
+            <p class"text-grey">${produit.isNew}</p>
+            </div>
+            </div>
+           </div>
+      `;
+      focus.innerHTML += html;
+  });
+}) 
+
+const discount = document.getElementById("discount");
+discount.addEventListener("click", () => {
+  const filterDiscount = isFilterEmpty ? result : produits;
+  const resultDiscount = filterDiscount.filter((product)  => product.discount);
+  focus.innerHTML ="";
+  number.innerHTML = resultDiscount.length;
+  resultDiscount.map((produit) => {
+      let html = `
+      <div class="trending-items">
+             <div class="parsent"> 
+               ${produit.discount ? `<p>${produit.discount}</p> ` : ""}
+             </div>
+              <img src="${produit.image}" alt="">
+             <div class="mountain">
+              <div>
+                <h3>${produit.title}</h3>
+              <p class"text-grey">${produit.category}</p>
+              </div>
+               <div>
+                <i class="fa-regular fa-heart"></i>
+               </div>
+             </div>
+             <div class="prize">
+              <div>
+                <p>from</p>
+              <h2>${produit.price} FDJ</h2>
+              <p>${produit.isPriceVariable}</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
+              </div>
+             </div>
+              <div class="clock">
+                <i class="fa-regular fa-clock"></i>
+                 <p class"text-grey">${produit.duration}</p>
+              </div>
+              <div class="correct">
+              <div class="new">
+                <i class="fa-solid fa-check"></i>
+                <p class"text-grey">${produit.isFreeCancellation}</p>
+              </div>
+              <div class="new">
+                <i class="fa-solid fa-check"></i>
+              <p class"text-grey">${produit.isNew}</p>
+              </div>
+              </div>
+             </div>
+        `;
+        focus.innerHTML += html;
+    });
+})
+
+
+
+
+const entrada = document.getElementById("new");
+entrada.addEventListener("click", () => {
+  const filterNew = isFilterEmpty ? result : produits;
+  const resultNew = filterNew.filter((product)  => product.isNew);
+  focus.innerHTML ="";
+  number.innerHTML = resultNew.length;
+  resultNew.map((produit) => {
+      let html = `
+      <div class="trending-items">
+             <div class="parsent"> 
+               ${produit.discount ? `<p>${produit.discount}%</p> ` : ""}
+             </div>
+              <img src="${produit.image}" alt="">
+             <div class="mountain">
+              <div>
+                <h3>${produit.title}</h3>
+              <p class"text-grey">${produit.category}</p>
+              </div>
+               <div>
+                <i class="fa-regular fa-heart"></i>
+               </div>
+             </div>
+             <div class="prize">
+              <div>
+                <p>from</p>
+              <h2>${produit.price} FDJ</h2>
+              <p>${produit.isPriceVariable}</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <p>${produit.rating.stars} (${produit.rating.reviews} reviews)</p>
+              </div>
+             </div>
+              <div class="clock">
+                <i class="fa-regular fa-clock"></i>
+                 <p class"text-grey">${produit.duration}</p>
+              </div>
+              <div class="correct">
+              <div class="new">
+                <i class="fa-solid fa-check"></i>
+                <p class"text-grey">${produit.isFreeCancellation}</p>
+              </div>
+              <div class="new">
+                <i class="fa-solid fa-check"></i>
+              <p class"text-grey">${produit.isNew}</p>
+              </div>
+              </div>
+             </div>
+        `;
+        focus.innerHTML += html;
+    });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
