@@ -227,7 +227,6 @@ position: relative;
     position: sticky;
     top: 0;
     cursor: pointer;
-    
 }
 .view ul {
    display: flex;
