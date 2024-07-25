@@ -153,10 +153,7 @@ header  .header-button  {
     justify-content: space-between;
     padding: 40px 60px;
 }
-.deals.specials:hover {
-    background: #fdbc60;
-    color: white;
-}
+
 .specials {
     display: flex;
     gap: 15px;

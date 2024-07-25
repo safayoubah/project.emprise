@@ -219,16 +219,16 @@ position: relative;
 }
 .view ul {
    display: flex;
-   gap: 30px;
+   justify-content: space-between;
    list-style: none;
-   padding: 0 20px;
-   margin-top: 10px;
+   padding: 10px 20px;
+   margin-top: 15px;
 }
 .file {
     display: flex;
     align-items: center;
     gap: 60px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .file i {
     font-size: 50px;
@@ -248,7 +248,8 @@ position: relative;
 .duration {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 20px;
 }
 .duration i {
     color: #fdbc60;

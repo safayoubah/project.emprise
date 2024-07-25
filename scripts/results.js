@@ -488,8 +488,6 @@ discount.addEventListener("click", () => {
 })
 
 
-
-
 const entrada = document.getElementById("new");
 entrada.addEventListener("click", () => {
   const filterNew = isFilterEmpty ? result : produits;
