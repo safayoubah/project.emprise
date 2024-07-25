@@ -6,6 +6,12 @@
   .text-grey {
     color: grey;
   }
+  .active {
+    color: #fdbc60;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    cursor: pointer;
+  }
 
 
 
@@ -217,12 +223,19 @@ position: relative;
 .over {
     padding-left: 285px;
 }
+.view {
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    
+}
 .view ul {
    display: flex;
    justify-content: space-between;
    list-style: none;
    padding: 10px 20px;
    margin-top: 15px;
+   font-weight: bold;
 }
 .file {
     display: flex;

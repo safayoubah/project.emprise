@@ -118,12 +118,12 @@
             </div>
             <div class="view">
               <ul>
-                <li>Overview</li>
-                <li>Itinerary</li>
-                <li>Inclusions</li>
-                <li>Reviews</li>
-                <li>FAQ</li>
-                <li>Essential Info</li>
+                <li class="active" onclick="activateTab(this)">Overview</li>
+                <li onclick="activateTab(this)">Itinerary</li>
+                <li onclick="activateTab(this)">Inclusions</li>
+                <li onclick="activateTab(this)"><a href="#day-1">Reviews</a></li>
+                <li onclick="activateTab(this)">FAQ</li>
+                <li onclick="activateTab(this)">Essential Info</li>
               </ul>
             </div>
             <div class="file">
@@ -182,7 +182,7 @@
               </div>
             </div>
             <hr />
-            <div class="day-1">
+            <div class="day-1" id="day-1">
               <div class="icon">
                 <i class="fa-regular fa-map"></i>
               </div>
@@ -476,11 +476,11 @@
                 <p>What type of clothing are suitable for this trek?</p>
                </div>
                 <div>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <i class="fa-solid fa-chevron-down" onclick="content()"></i>
                 </div>
               </div> 
               </div>
-              <div class="type">
+              <div class="type" id="type">
               <p>Dolor elit voluptate cupidatat in eiusmod. Eiusmod ex eu incididunt <br>
                 etile pariatur dolor mollit reprehenderit magna tempor ex minim velit <br>
                 sunt do.</p>
@@ -779,5 +779,6 @@
     </footer>
     <script src="../scripts/carousel.js"></script>
     <script src="../../test.js"></script>
+    <script src="../scripts/details.js"></script>
   </body>
 </html>
