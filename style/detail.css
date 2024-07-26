@@ -14,6 +14,9 @@
   }
 
 
+  .active a {
+    color: #fdbc60;
+  }
 
 header {
     display: flex;
@@ -236,6 +239,11 @@ position: relative;
    padding: 10px 20px;
    margin-top: 15px;
    font-weight: bold;
+}
+.view ul li a {
+    text-decoration: none;
+    
+
 }
 .file {
     display: flex;
