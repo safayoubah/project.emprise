@@ -227,6 +227,7 @@ position: relative;
     position: sticky;
     top: 0;
     cursor: pointer;
+    background-color: white;
 }
 .view ul {
    display: flex;
@@ -372,6 +373,8 @@ position: relative;
     border-top-right-radius: 10px;
 
 }
+
+
 .lake {
     padding: 10px;
     margin-top: 20px;

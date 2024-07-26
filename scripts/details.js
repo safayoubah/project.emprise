@@ -1,6 +1,6 @@
 
 
-function activateTab(element) {
+const activateTab = (element) => {
     // Récupère tous les éléments <li>
     const items = document.querySelectorAll('.view ul li');
 
@@ -24,3 +24,14 @@ function activateTab(element) {
 
     }
   }
+
+  const icon = document.getElementById("icon")
+      icon.addEventListener("click", () => {
+        const part = document.getElementById('part');
+        if (part.style.display ==="none" || part.style.display ===""){
+            part.style.display = "block";
+        }else {
+            part.style.display = "none";
+        }
+      });
+  
